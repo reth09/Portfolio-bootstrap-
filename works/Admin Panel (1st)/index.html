@@ -1,0 +1,1651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RETH RON ADMIN PANEL</title>
+
+    <link rel="shortcut icon" href="assets/images/robot.png" type="image/x-icon">
+
+    <!-- font Awesone -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- remixicon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- google icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- fonts -->
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+
+    <!-- css -->
+
+    <!-- main css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- media -->
+    <link rel="stylesheet" href="assets/css/media.css">
+
+
+</head>
+
+<body>
+    <!-- pre-loader -->
+
+    <div class="loader d-flex justify-center align-center">
+        <div class="c-outter"></div>
+        <div class="c-outter2"></div>
+        <div class="c-outter3"></div>
+        <h1>LOADING</h1>
+    </div>
+
+    <!-- header -->
+    <div class="logo-header">
+        <a href="index.html" class="d-flex align-center">
+            <svg class="logo-abbr" width="39" height="23" viewBox="0 0 39 23" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path class="w3"
+                    d="M32.0362 22H19.0466L20.7071 18.7372C20.9559 18.2484 21.455 17.9378 22.0034 17.9305L31.1036 17.8093C33.0753 17.6497 33.6571 15.9246 33.7015 15.0821C33.7015 13.2196 32.1916 12.5765 31.4367 12.4878H23.7095L25.9744 8.49673H30.4375C31.8763 8.3903 32.236 7.03332 32.236 6.36814C32.3426 4.93133 30.9482 4.61648 30.2376 4.63865H28.6955C28.2646 4.63865 27.9788 4.19212 28.1592 3.8008L29.7047 0.44798C31.0903 0.394765 32.8577 0.780573 33.5683 0.980129C38.6309 3.42801 37.0988 7.98676 35.6999 9.96014C38.1513 11.9291 38.4976 14.3282 38.3644 15.2816C38.098 20.1774 34.0346 21.8005 32.0362 22Z"
+                    fill="#fff"></path>
+                <path class="react-w"
+                    d="M9.89261 21.4094L0 2.80536H4.86354C5.41354 2.80536 5.91795 3.11106 6.17246 3.59864L12.4032 15.5355C12.6333 15.9762 12.6261 16.5031 12.3842 16.9374L9.89261 21.4094Z"
+                    fill="white"></path>
+                <path class="react-w"
+                    d="M17.5705 21.4094L7.67786 2.80536H12.5372C13.0894 2.80536 13.5954 3.11351 13.8489 3.60412L20.302 16.0939L17.5705 21.4094Z"
+                    fill="white"></path>
+                <path class="react-w"
+                    d="M17.6443 21.4094L28.2751 0H23.4513C22.8806 0 22.361 0.328884 22.1168 0.844686L14.8271 16.2416L17.6443 21.4094Z"
+                    fill="white"></path>
+                <path class="react-w"
+                    d="M9.89261 21.4094L0 2.80536H4.86354C5.41354 2.80536 5.91795 3.11106 6.17246 3.59864L12.4032 15.5355C12.6333 15.9762 12.6261 16.5031 12.3842 16.9374L9.89261 21.4094Z"
+                    stroke="white"></path>
+                <path class="react-w"
+                    d="M17.5705 21.4094L7.67786 2.80536H12.5372C13.0894 2.80536 13.5954 3.11351 13.8489 3.60412L20.302 16.0939L17.5705 21.4094Z"
+                    stroke="white"></path>
+                <path class="react-w"
+                    d="M17.6443 21.4094L28.2751 0H23.4513C22.8806 0 22.361 0.328884 22.1168 0.844686L14.8271 16.2416L17.6443 21.4094Z"
+                    stroke="white"></path>
+            </svg>
+
+            <svg class="brand-title" width="47" height="16" viewBox="0 0 47 16" fill="white"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M8.36 15.2C7.2933 15.2 6.3 15.0267 5.38 14.68C4.4733 14.32 3.68 13.82 3 13.18C2.3333 12.5267 1.8133 11.76 1.44 10.88C1.0667 9.99999 0.880005 9.03999 0.880005 7.99999C0.880005 6.95999 1.0667 5.99999 1.44 5.11999C1.8133 4.23999 2.34 3.47999 3.02 2.83999C3.7 2.18666 4.49331 1.68666 5.40001 1.33999C6.30671 0.979988 7.3 0.799988 8.38 0.799988C9.5267 0.799988 10.5733 0.999988 11.52 1.39999C12.4667 1.78666 13.2667 2.36666 13.92 3.13999L12.24 4.71999C11.7333 4.17332 11.1667 3.76666 10.54 3.49999C9.9133 3.21999 9.2333 3.07999 8.5 3.07999C7.7667 3.07999 7.0933 3.19999 6.48 3.43999C5.88 3.67999 5.35331 4.01999 4.90001 4.45999C4.46001 4.89999 4.1133 5.41999 3.86 6.01999C3.62 6.61999 3.5 7.27999 3.5 7.99999C3.5 8.71999 3.62 9.37999 3.86 9.97999C4.1133 10.58 4.46001 11.1 4.90001 11.54C5.35331 11.98 5.88 12.32 6.48 12.56C7.0933 12.8 7.7667 12.92 8.5 12.92C9.2333 12.92 9.9133 12.7867 10.54 12.52C11.1667 12.24 11.7333 11.82 12.24 11.26L13.92 12.86C13.2667 13.62 12.4667 14.2 11.52 14.6C10.5733 15 9.52 15.2 8.36 15.2ZM16.4113 15V0.999988H22.1713C23.4113 0.999988 24.4713 1.19999 25.3513 1.59999C26.2446 1.99999 26.9313 2.57332 27.4113 3.31999C27.8913 4.06666 28.1313 4.95332 28.1313 5.97999C28.1313 7.00669 27.8913 7.89329 27.4113 8.63999C26.9313 9.37329 26.2446 9.93999 25.3513 10.34C24.4713 10.7267 23.4113 10.92 22.1713 10.92H17.8513L19.0113 9.73999V15H16.4113ZM25.5713 15L22.0313 9.91999H24.8112L28.3713 15H25.5713ZM19.0113 10.02L17.8513 8.77999H22.0513C23.1979 8.77999 24.0579 8.53329 24.6312 8.03999C25.2179 7.54669 25.5113 6.85999 25.5113 5.97999C25.5113 5.08666 25.2179 4.39999 24.6312 3.91999C24.0579 3.43999 23.1979 3.19999 22.0513 3.19999H17.8513L19.0113 1.91999V10.02ZM31.0402 15V0.999988H33.1802L39.3002 11.22H38.1802L44.2002 0.999988H46.3402L46.3602 15H43.9002L43.8802 4.85999H44.4002L39.2802 13.4H38.1202L32.9202 4.85999H33.5202V15H31.0402Z"
+                    fill="white"></path>
+            </svg>
+        </a>
+
+        <div class="nav-c2">
+            <i class="ri-menu-line"></i>
+            <i class="fa-solid fa-xmark x-mark d-flex align-center"></i>
+        </div>
+
+        <div class="nav-control d-flex align-center justify-center">
+            <div class="lines">
+                <span class="line1"></span>
+                <span class="line"></span>
+                <span class="line2"></span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="header-r align-center">
+        <div class="navbar-in d-flex justify-between align-center">
+            <div class="hdr-left d-flex align-center">
+                <div class="input">
+                    <span class="search">
+                        <i class="ri-search-line"></i>
+                    </span>
+                    <input type="text" name="header" id="" placeholder="search" class="hdr-input">
+                </div>
+            </div>
+            <ul class="hdr-right d-flex align-center">
+                <li class="nav-link"><i class="ri-settings-2-line"></i></li>
+                <li class="nav-link"><i class="ri-notification-2-line"></i></li>
+                <li class="nav-link"><i class="ri-mail-open-line"></i></li>
+                <a href="login.html">
+                    <li class="l-out">
+                        <p>LOGOUT</p>
+                    </li>
+                </a>
+                <li class="hdr-info d-flex align-center">
+                    <div class="img">
+                        <img src="assets/images/info.webp" alt="pfp">
+                    </div>
+                    <div class="info">
+                        <p class="iname">RETH RONNIE</p>
+                        <p>rethron@gmail.com</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- aside -->
+    <aside class="aside">
+        <div class="scroll-aside">
+            <ul class="menu d-flex flex-column">
+                <li class="ur-cm">YOUR COMPANY</li>
+
+                <li class="as-set">
+                    <a href="javascript:void(0);">
+
+                        <div class="set-text d-flex align-center">
+                            <i class="ri-home-smile-line"></i>
+                            <span class="nav-text">Dashboard</span>
+                        </div>
+
+                        <i class=" dd-icon fa-solid fa-caret-right"></i>
+                    </a>
+                    <div class="as-content">
+                        <ul>
+                            <li>
+                                <a class="asz light-mode" href="javascript:void(0);">Dashboard light</a>
+                            </li>
+                            <li>
+                                <a class="asz dark-mode" href="javascript:void(0);">Dashboard Dark</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="as-li">
+                    <a href="javascript:void(0);">
+                        <i class="ri-user-line as-icons"></i>
+                        <span class="nav-text">Employee</span>
+                    </a>
+                </li>
+                <li class="as-li">
+                    <a href="javascript:void(0);">
+                        <i class="ri-pie-chart-line as-icons"></i>
+                        <span class="nav-text">Core HR</span>
+                    </a>
+                </li>
+                <li class="as-li">
+                    <a href="javascript:void(0);">
+                        <i class="ri-funds-box-line as-icons"></i>
+                        <span class="nav-text as-new">Finance</span>
+                    </a>
+                </li>
+
+                <li class="as-set">
+                    <a href="javascript:void(0);">
+
+                        <div class="set-text d-flex align-center">
+                            <i class="ri-edit-fill"></i>
+                            <span class="nav-text">Tasks</span>
+                        </div>
+
+                        <i class=" dd-icon fa-solid fa-caret-right"></i>
+                    </a>
+                    <div class="as-content">
+                        <ul>
+                            <li>
+                                <a class="asz" href="javascript:void(0);">Tasks</a>
+                            </li>
+                            <li>
+                                <a class="asz" href="javascript:void(0);">Tasks Summary</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="as-li">
+                    <a href="javascript:void(0);">
+                        <i class="ri-task-line as-icons"></i>
+                        <span class="nav-text">Performance</span>
+                    </a>
+                </li>
+                <li class="as-li">
+                    <a href="javascript:void(0);">
+                        <i class="ri-bar-chart-box-line as-icons"></i>
+                        <span class="nav-text">Projects</span>
+                    </a>
+                </li>
+                <li class="as-li">
+                    <a href="javascript:void(0);">
+                        <i class="ri-file-chart-line as-icons"></i>
+                        <span class="nav-text">Reports</span>
+                    </a>
+                </li>
+                <li class="as-li">
+                    <a href="javascript:void(0);">
+                        <i class="ri-group-line as-icons"></i>
+                        <span class="nav-text">Manage Clients</span>
+                    </a>
+                </li>
+                <li class="as-li">
+                    <a href="javascript:void(0);">
+                        <i class="ri-article-line as-icons"></i>
+                        <span class="nav-text as-new">blog</span>
+                    </a>
+                </li>
+
+                <li class="ur-cm">OUR FEATURES</li>
+
+                <li class="as-set">
+                    <a href="javascript:void(0);">
+
+                        <div class="set-text d-flex align-center">
+                            <i class="ri-gamepad-line"></i>
+                            <span class="nav-text as-new">Apps</span>
+                        </div>
+
+                        <i class=" dd-icon fa-solid fa-caret-right"></i>
+                    </a>
+                    <div class="as-content">
+                        <ul>
+                            <li>
+                                <a class="asz" href="javascript:void(0);">Chat</a>
+                            </li>
+                            <li>
+                                <a class="asz as-new" href="javascript:void(0);">User's Manager</a>
+                            </li>
+                            <li>
+                                <a class="asz" href="javascript:void(0);">Customer Manager</a>
+                            </li>
+                            <li>
+                                <a class="asz" href="javascript:void(0);">Contacts</a>
+                            </li>
+                            <li>
+                                <a class="asz as-new" href="javascript:void(0);">Email</a>
+                            </li>
+                            <li>
+                                <a class="asz as-new" href="javascript:void(0);">Calender</a>
+                            </li>
+                            <li>
+                                <a class="asz" href="javascript:void(0);">Shop</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="as-set">
+                    <a href="javascript:void(0);">
+
+                        <div class="set-text d-flex align-center">
+                            <i class="ri-pie-chart-line as-icons"></i>
+                            <span class="nav-text">Charts</span>
+                        </div>
+
+                        <i class=" dd-icon fa-solid fa-caret-right"></i>
+                    </a>
+                    <div class="as-content">
+                        <ul>
+                            <li>
+                                <a class="asz" href="javascript:void(0);">Flot</a>
+                            </li>
+                            <li>
+                                <a class="asz" href="javascript:void(0);">Morris</a>
+                            </li>
+                            <li>
+                                <a class="asz" href="javascript:void(0);">ChartJS</a>
+                            </li>
+                            <li>
+                                <a class="asz" href="javascript:void(0);">Chartist</a>
+                            </li>
+                            <li>
+                                <a class="asz" href="javascript:void(0);">Sparkline</a>
+                            </li>
+                            <li>
+                                <a class="asz" href="javascript:void(0);">Peity</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="as-set">
+                    <a href="javascript:void(0);">
+
+                        <div class="set-text d-flex align-center">
+                            <i class="ri-star-line as-icons"></i>
+                            <span class="nav-text">Bootstrap</span>
+                        </div>
+
+                        <i class=" dd-icon fa-solid fa-caret-right"></i>
+                    </a>
+                    <div class="as-content">
+                        <ul>
+                            <li>
+                                <a class="asz" href="javascript:void(0);">Accordion</a>
+                            </li>
+                            <li>
+                                <a class="asz" href="javascript:void(0);">Alert</a>
+                            </li>
+                            <li>
+                                <a class="asz" href="javascript:void(0);">Badge</a>
+                            </li>
+                            <li>
+                                <a class="asz" href="javascript:void(0);">Button</a>
+                            </li>
+                            <li>
+                                <a class="asz" href="javascript:void(0);">Modal</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="as-set">
+                    <a href="javascript:void(0);">
+
+                        <div class="set-text d-flex align-center">
+                            <i class="ri-folder-2-line as-icons"></i>
+                            <span class="nav-text">Plug-INs</span>
+                        </div>
+
+                        <i class=" dd-icon fa-solid fa-caret-right"></i>
+                    </a>
+                    <div class="as-content">
+                        <ul>
+                            <li>
+                                <a class="asz" href="javascript:void(0);">Select-2</a>
+                            </li>
+                            <li>
+                                <a class="asz" href="javascript:void(0);">Nestable</a>
+                            </li>
+                            <li>
+                                <a class="asz" href="javascript:void(0);">Noui Slider</a>
+                            </li>
+                            <li>
+                                <a class="asz" href="javascript:void(0);">Sweet Alert</a>
+                            </li>
+                            <li>
+                                <a class="asz" href="javascript:void(0);">Toastr</a>
+                            </li>
+                            <li>
+                                <a class="asz" href="javascript:void(0);">JQV Map</a>
+                            </li>
+                            <li>
+                                <a class="asz" href="javascript:void(0);">Light Gallery</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="as-li">
+                    <a href="javascript:void(0);">
+                        <i class="ri-apps-2-line as-icons"></i>
+                        <span class="nav-text">Widgets</span>
+                    </a>
+                </li>
+
+                <li class="as-set">
+                    <a href="javascript:void(0);">
+
+                        <div class="set-text d-flex align-center">
+                            <i class="ri-article-line as-icons"></i>
+                            <span class="nav-text as-new">Forms</span>
+                        </div>
+
+                        <i class=" dd-icon fa-solid fa-caret-right"></i>
+                    </a>
+                    <div class="as-content">
+                        <ul>
+                            <li>
+                                <a class="asz" href="javascript:void(0);">Form Elements</a>
+                            </li>
+                            <li>
+                                <a class="asz" href="javascript:void(0);">Wizard</a>
+                            </li>
+                            <li>
+                                <a class="asz as-new" href="javascript:void(0);">CK-Editor</a>
+                            </li>
+                            <li>
+                                <a class="asz" href="javascript:void(0);">Pickers</a>
+                            </li>
+                            <li>
+                                <a class="asz as-new" href="javascript:void(0);">Form Validate</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="as-set">
+                    <a href="javascript:void(0);">
+
+                        <div class="set-text d-flex align-center">
+                            <i class="ri-archive-drawer-line as-icons"></i>
+                            <span class="nav-text">Table</span>
+                        </div>
+
+                        <i class=" dd-icon fa-solid fa-caret-right"></i>
+                    </a>
+                    <div class="as-content">
+                        <ul>
+                            <li>
+                                <a class="asz" href="javascript:void(0);">Bootstrap</a>
+                            </li>
+                            <li>
+                                <a class="asz" href="javascript:void(0);">Data Table</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="as-set">
+                    <a href="javascript:void(0);">
+
+                        <div class="set-text d-flex align-center">
+                            <i class="ri-pages-line as-icons"></i>
+                            <span class="nav-text">Pages</span>
+                        </div>
+
+                        <i class=" dd-icon fa-solid fa-caret-right"></i>
+                    </a>
+                    <div class="as-content">
+                        <ul>
+                            <li>
+                                <a class="asz" href="javascript:void(0);">Login</a>
+                            </li>
+                            <li>
+                                <a class="asz" href="javascript:void(0);">Register</a>
+                            </li>
+                            <li>
+                                <a class="asz" href="javascript:void(0);">Error</a>
+                            </li>
+                            <li>
+                                <a class="asz" href="javascript:void(0);">Lock Screen</a>
+                            </li>
+                            <li>
+                                <a class="asz" href="javascript:void(0);">Empty page</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- page area -->
+
+
+    <main class="page-area">
+
+        <!-- page title -->
+
+        <div class="page-title d-flex flex-wrap justify-between align-center">
+            <div class="lft">
+                <span class="head">Dashboard</span>
+                <span>home</span>
+                <span class="side">/</span>
+                <span class="side">Dashboard</span>
+            </div>
+            <div class="rft">
+                <a href="javascript:void(0);">+ Add Task</a>
+            </div>
+        </div>
+
+        <!-- page-content -->
+
+        <div class="page-content">
+            <div class="c-area1 ">
+                <div class=" t1-up">
+                    <div class="pg-box-bg">
+                        <div class="upper d-flex justify-between align-center">
+
+                            <div class="info">
+                                <h6>
+                                    Total Deposit
+                                </h6>
+                                <h3>
+                                    $1200.00
+                                </h3>
+                            </div>
+
+                            <div class="icon">
+                                <i class="fa-solid fa-dollar-sign"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="chart">
+                            <div id="chart1">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="c-area2 ">
+                <div class=" t1-up">
+                    <div class="pg-box-bg">
+                        <div class="upper d-flex justify-between align-center">
+
+                            <div class="info">
+                                <h6>
+                                    GENERAL EXPENSES
+                                </h6>
+                                <h3>
+                                    $1800.00
+                                </h3>
+                            </div>
+
+                            <div class="icon">
+                                <i class="fa-solid fa-dollar-sign"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="chart">
+                            <div id="chart2">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="c-area3 ">
+                <div class=" t1-up">
+                    <div class="pg-box-bg">
+                        <div class="upper d-flex justify-between align-center">
+
+                            <div class="info">
+                                <h6>
+                                    Total Expenses
+                                </h6>
+                                <h3>
+                                    $1200.00
+                                </h3>
+                            </div>
+
+                            <div class="icon3">
+                                <i class="fa-solid fa-dollar-sign"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="chart">
+                            <div id="chart3">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="c-area4 ">
+                <div class=" t1-up">
+                    <div class="pg-box-bg">
+                        <div class="upper d-flex justify-between align-center">
+
+                            <div class="info">
+                                <h6>
+                                    Total Tasks
+                                </h6>
+                                <h3>
+                                    20
+                                </h3>
+                            </div>
+
+                            <div class="icon">
+                                <i class="ri-calendar-todo-line"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="chart">
+                            <div id="chart4">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="c-area5">
+                <div class="t2">
+                    <div class="pg-box-bg">
+
+                        <h3 class="p">
+                            Total Earnings
+                        </h3>
+
+                        <h2 class="h">
+                            $9,679.00
+                        </h2>
+
+                        <div id="chart6"></div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="c-area6 brd">
+                <div class="t1-down">
+
+
+                    <div class="upp">
+                        <h3>
+                            Projects Overview
+                        </h3>
+                    </div>
+
+                    <div id="chart5"></div>
+
+                    <div class="down d-flex ">
+                        <div class="txt-cen">
+                            <h3 class="h">12,721</h3>
+                            <span class="p">Number of Projects</span>
+                        </div>
+
+                        <div class="txt-cen">
+                            <h3 class="h">721</h3>
+                            <span class="p2">Active Projects</span>
+                        </div>
+
+                        <div class="txt-cen">
+                            <h3 class="h">$2,50,523</h3>
+                            <span class="p3">Revenue</span>
+                        </div>
+
+                        <div class="txt-cen">
+                            <h3 class="h">12,275h</h3>
+                            <span class="p4">Working Hours</span>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="c-area7">
+                <div class="t2-down">
+                    <div class="upp d-flex justify-between align-center">
+                        <h3 class="h">
+                            My To Do List
+                        </h3>
+                        <span class="p">
+                            View All
+                            <span class="p2">
+                                +Add To Do
+                            </span>
+                        </span>
+                    </div>
+                    <div class="lists">
+
+                        <div class="inner">
+                            <div class="li ">
+                                <div class="alert d-flex align-center">
+
+                                    <i class="ri-alert-line"></i>
+                                    <span class="l-h">latest to do's</span>
+
+                                </div>
+
+                                <div class="up d-flex justify-between align-center">
+
+                                    <div class="up1 d-flex">
+
+                                        <h3 class="h">
+                                            Complete this projects Monday
+                                        </h3>
+                                    </div>
+
+                                    <div class="up2 d-flex align-center">
+                                        <i class="ri-delete-bin-5-line icon"></i>
+                                        <i class="ri-edit-line icon2"></i>
+                                    </div>
+                                </div>
+                                <span class="d-t">
+                                    2023-12-26 07:15:00
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="inner">
+                            <div class="li">
+                                <div class="alert2 d-flex align-center">
+
+                                    <i class="ri-check-line"></i>
+                                    <span class="l-h">latest finished to do's</span>
+
+                                </div>
+                                <div class="up d-flex justify-between align-center">
+                                    <div class="up1 d-flex">
+
+                                        <h3 class="h">
+                                            Complete this projects Monday
+                                        </h3>
+                                    </div>
+                                    <div class="up2 d-flex align-center">
+                                        <i class="ri-delete-bin-5-line icon"></i>
+                                        <i class="ri-edit-line icon2"></i>
+                                    </div>
+                                </div>
+                                <span class="d-t">
+                                    2023-12-26 07:15:00
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="inner">
+                            <div class="li">
+                                <div class="up d-flex justify-between align-center">
+                                    <div class="up1 d-flex">
+
+                                        <h3 class="h">
+                                            Complete this projects Monday
+                                        </h3>
+                                    </div>
+                                    <div class="up2 d-flex align-center">
+                                        <i class="ri-delete-bin-5-line icon"></i>
+                                        <i class="ri-edit-line icon2"></i>
+                                    </div>
+                                </div>
+                                <span class="d-t">
+                                    2023-12-26 07:15:00
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="inner">
+                            <div class="li">
+                                <div class="up d-flex justify-between align-center">
+                                    <div class="up1 d-flex">
+
+                                        <h3 class="h">
+                                            Complete this projects Monday
+                                        </h3>
+                                    </div>
+                                    <div class="up2 d-flex align-center">
+                                        <i class="ri-delete-bin-5-line icon"></i>
+                                        <i class="ri-edit-line icon2"></i>
+                                    </div>
+                                </div>
+                                <span class="d-t">
+                                    2023-12-26 07:15:00
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="inner">
+                            <div class="li">
+                                <div class="up d-flex justify-between align-center">
+                                    <div class="up1 d-flex">
+
+                                        <h3 class="h">
+                                            Complete this projects Monday
+                                        </h3>
+                                    </div>
+                                    <div class="up2 d-flex align-center">
+                                        <i class="ri-delete-bin-5-line icon"></i>
+                                        <i class="ri-edit-line icon2"></i>
+                                    </div>
+                                </div>
+                                <span class="d-t">
+                                    2023-12-26 07:15:00
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="inner">
+                            <div class="li">
+                                <div class="up d-flex justify-between align-center">
+                                    <div class="up1 d-flex">
+
+                                        <h3 class="h">
+                                            Complete this projects Monday
+                                        </h3>
+                                    </div>
+                                    <div class="up2 d-flex align-center">
+                                        <i class="ri-delete-bin-5-line icon"></i>
+                                        <i class="ri-edit-line icon2"></i>
+                                    </div>
+                                </div>
+                                <span class="d-t">
+                                    2023-12-26 07:15:00
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="c-area8 brd">
+
+                <div class="upp d-flex justify-between align-center">
+                    <h3>
+                        Active Projects
+                    </h3>
+                    <div class="expo d-flex align-center">
+                        <i class="ri-file-zip-line"></i>
+                        <span class="p">
+                            Export Report
+                        </span>
+                    </div>
+                </div>
+
+                <div class="down">
+                    <table class="t-ble">
+                        <thead>
+                            <tr>
+                                <th style="min-width: 150px; max-width: 100%;">
+                                    <div class="innn1 d-flex align-center justify-center">
+                                        <span>Project Name</span>
+                                        <i class="fa-solid fa-sort"></i>
+                                    </div>
+                                </th>
+
+                                <th style="min-width: 190px; max-width: 100%;">
+                                    <div class="innn d-flex align-center justify-center">
+                                        <span>Project Lead</span>
+                                        <i class="fa-solid fa-sort"></i>
+                                    </div>
+                                </th>
+
+                                <th style="min-width: 170px; max-width: 100%;">
+                                    <div class="innn d-flex align-center justify-center">
+                                        <span>Progress</span>
+                                        <i class="fa-solid fa-sort"></i>
+                                    </div>
+                                </th>
+
+                                <th style="min-width: 120px; max-width: 100%;">
+                                    <div class="innn d-flex align-center justify-center">
+                                        <span>Assignee</span>
+                                        <i class="fa-solid fa-sort"></i>
+                                    </div>
+                                </th>
+
+                                <th style="min-width: 118px; max-width: 100%;">
+                                    <div class="innn d-flex align-center justify-center">
+                                        <span>Status</span>
+                                        <i class="fa-solid fa-sort"></i>
+                                    </div>
+                                </th>
+
+                                <th style="min-width: 90px; max-width: 100%;">
+                                    <div class="innn-l d-flex align-center justify-center">
+                                        <span>Due Date</span>
+                                        <i class="fa-solid fa-sort"></i>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="d-flex justify-center align-center">
+                                        <span>Batman</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex  align-center p-name" style="padding-left: 20px;">
+                                        <img src="assets/images/robo4.png" alt="">
+                                        <span>William Reth</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-center justify-center pbar">
+                                        <progress class="p-bar" max="100" value="53"></progress>
+                                        <span>53%</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class=" assi d-flex align-center justify-center">
+                                        <img src="assets/images/robo3.png" alt="">
+                                        <img src="assets/images/robo2.png" alt="">
+                                        <img src="assets/images/robo4.png" alt="">
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="d-flex justify-center align-center">
+                                        <span class="in-pro">
+                                            InProgress
+                                        </span>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="d-flex justify-center align-center">
+                                        08 SEPT 2023
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="d-flex justify-center align-center">
+                                        <span>Building</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex  align-center p-name" style="padding-left: 20px;">
+                                        <img src="assets/images/robo3.png" alt="">
+                                        <span>Conor gregor</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-center justify-center pbar">
+                                        <progress class="p-bar" max="100" value="38"></progress>
+                                        <span>38%</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class=" assi d-flex align-center justify-center">
+                                        <img src="assets/images/robo2.png" alt="">
+                                        <img src="assets/images/robo4.png" alt="">
+                                        <img src="assets/images/robo3.png" alt="">
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="d-flex justify-center align-center">
+                                        <span class="in-pro">
+                                            Pending
+                                        </span>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="d-flex justify-center align-center">
+                                        11 SEPT 2023
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="d-flex justify-center align-center">
+                                        <span>Painting</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex  align-center p-name" style="padding-left: 20px;">
+                                        <img src="assets/images/robo2.png" alt="">
+                                        <span>Joe Rogan</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-center justify-center pbar">
+                                        <progress class="p-bar" max="100" value="70"></progress>
+                                        <span>70%</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class=" assi d-flex align-center justify-center">
+                                        <img src="assets/images/robo4.png" alt="">
+                                        <img src="assets/images/robo3.png" alt="">
+                                        <img src="assets/images/robo2.png" alt="">
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="d-flex justify-center align-center">
+                                        <span class="in-pro">
+                                            Pending
+                                        </span>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="d-flex justify-center align-center">
+                                        02 SEPT 2023
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="d-flex justify-center align-center">
+                                        <span>Weapons</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex  align-center p-name" style="padding-left: 20px;">
+                                        <img src="assets/images/robo5.png" alt="">
+                                        <span>David Goggins</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-center justify-center pbar">
+                                        <progress class="p-bar" max="100" value="94"></progress>
+                                        <span>94%</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class=" assi d-flex align-center justify-center">
+                                        <img src="assets/images/robo3.png" alt="">
+                                        <img src="assets/images/robo4.png" alt="">
+                                        <img src="assets/images/robo2.png" alt="">
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="d-flex justify-center align-center">
+                                        <span class="in-pro">
+                                            Completed
+                                        </span>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="d-flex justify-center align-center">
+                                        09 SEPT 2023
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="d-flex justify-center align-center">
+                                        <span>Racing</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex  align-center p-name" style="padding-left: 20px;">
+                                        <img src="assets/images/robo4.png" alt="">
+                                        <span>Razor Prime</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-center justify-center pbar">
+                                        <progress class="p-bar" max="100" value="53"></progress>
+                                        <span>43%</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class=" assi d-flex align-center justify-center">
+                                        <img src="assets/images/robo4.png" alt="">
+                                        <img src="assets/images/robo2.png" alt="">
+                                        <img src="assets/images/robo3.png" alt="">
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="d-flex justify-center align-center">
+                                        <span class="in-pro">
+                                            InProgress
+                                        </span>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="d-flex justify-center align-center">
+                                        14 SEPT 2023
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="d-flex justify-center align-center">
+                                        <span>The Club</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex  align-center p-name" style="padding-left: 20px;">
+                                        <img src="assets/images/robot.png" alt="">
+                                        <span>Andrew Reth</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-center justify-center pbar">
+                                        <progress class="p-bar" max="100" value="83"></progress>
+                                        <span>83%</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class=" assi d-flex align-center justify-center">
+                                        <img src="assets/images/robo2.png" alt="">
+                                        <img src="assets/images/robo3.png" alt="">
+                                        <img src="assets/images/robo4.png" alt="">
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="d-flex justify-center align-center">
+                                        <span class="in-pro">
+                                            Pending
+                                        </span>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="d-flex justify-center align-center">
+                                        12 SEPT 2023
+                                    </div>
+                                </td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+            <div class="c-area9 brd">
+                <div class="d-flex map">
+                    <div class="w-8 w-sm-12">
+                        <div id="chartdiv"></div>
+                    </div>
+                    <div class="w-4 w-sm-12">
+                        <ul class="coun">
+
+                            <li class="li d-flex ">
+                                <div class="flag">
+                                    <img src="assets/images/india.png" alt="index">
+                                </div>
+                                <div class="up d-flex justify-between">
+                                    <span class="nme">
+                                        INDIA
+                                    </span>
+                                    <span class="pcn">
+                                        50%
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li class="li d-flex ">
+                                <div class="flag">
+                                    <img src="assets/images/russia.png" alt="index">
+                                </div>
+                                <div class="up d-flex justify-between">
+                                    <span class="nme">
+                                        RUSSIA
+                                    </span>
+                                    <span class="pcn">
+                                        75%
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li class="li d-flex ">
+                                <div class="flag">
+                                    <img src="assets/images/japan.png" alt="index">
+                                </div>
+                                <div class="up d-flex justify-between">
+                                    <span class="nme">
+                                        JAPAN
+                                    </span>
+                                    <span class="pcn">
+                                        20%
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li class="li d-flex ">
+                                <div class="flag">
+                                    <img src="assets/images/portu.png" alt="index">
+                                </div>
+                                <div class="up d-flex justify-between">
+                                    <span class="nme">
+                                        PORTUGESE
+                                    </span>
+                                    <span class="pcn">
+                                        55%
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li class="li d-flex ">
+                                <div class="flag">
+                                    <img src="assets/images/argentina.png" alt="index">
+                                </div>
+                                <div class="up d-flex justify-between">
+                                    <span class="nme">
+                                        ARGENTINA
+                                    </span>
+                                    <span class="pcn">
+                                        40%
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li class="li d-flex ">
+                                <div class="flag">
+                                    <img src="assets/images/uk.png" alt="index">
+                                </div>
+                                <div class="up d-flex justify-between">
+                                    <span class="nme">
+                                        UNITED KINGDOM
+                                    </span>
+                                    <span class="pcn">
+                                        25%
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li class="li d-flex ">
+                                <div class="flag">
+                                    <img src="assets/images/usa.png" alt="index">
+                                </div>
+                                <div class="up d-flex justify-between">
+                                    <span class="nme">
+                                        USA
+                                    </span>
+                                    <span class="pcn">
+                                        80%
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li class="li d-flex ">
+                                <div class="flag">
+                                    <img src="assets/images/brazil-.png" alt="index">
+                                </div>
+                                <div class="up d-flex justify-between">
+                                    <span class="nme">
+                                        BRAZIL
+                                    </span>
+                                    <span class="pcn">
+                                        5%
+                                    </span>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="c-area10 brd">
+
+                <div class="upp d-flex justify-between align-center">
+                    <h3 class="h">
+                        Chat
+                    </h3>
+
+                    <div class="ico d-flex align-center">
+                        <i class="ri-settings-3-line"></i>
+                        <span>Settings</span>
+                    </div>
+                </div>
+
+                <div class="f-chat d-flex">
+                    <img src="assets/images/robot.png" class="m-ava" alt="robo">
+
+                    <div class="m1 d-flex flex-column">
+                        <p class="msg">
+                            Good Evening
+                        </p>
+                        <p class="msg">
+                            Can you arrange schedule for next meeting?
+                        </p>
+                    </div>
+
+                </div>
+
+                <span class="day d-flex justify-center">
+                    TODAY
+                </span>
+
+                <div class="m2 d-flex flex-column">
+                    <p class="msg">
+                        Very Good morning
+                    </p>
+                    <p class="msg">
+                        Okay, Ill arrange it soon. i noftify you when
+                    </p>
+
+                    <p class="msg">
+                        Very Good morning
+                    </p>
+                    <p class="msg">
+                        <span>Okay, Ill arrange it soon. i noftify you when its done</span>
+                        <span>+91-235 2574 2566</span>
+                        <span>kk Sharma</span>
+                        <span>pan card eeer2063i</span>
+                    </p>
+                </div>
+
+
+
+                <div class="sen-txt">
+                    <input type="text" name="" id="msg" placeholder="hello">
+                    <div class="button d-flex">
+                        <span>SEND</span>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="c-area11 brd">
+                <div class="title">
+                    <h3>
+                        Projects Status
+                    </h3>
+                </div>
+                <div class="d-flex flex-column justify-center align-center">
+                    <div id="cc11" class="d-flex justify-center"></div>
+                    <div class="d-info">
+                        <div class="d-in d-flex justify-between align-center">
+                            <div class="left d-flex align-center">
+                                <span class="dots"></span>
+                                <h3>
+                                    Completed Projects
+                                </h3>
+                            </div>
+                            <span>125 Projects</span>
+                        </div>
+
+                        <div class="d-in d-flex justify-between align-center">
+                            <div class="left d-flex align-center">
+                                <span class="dots"></span>
+                                <h3>
+                                    Almost Done Projects
+                                </h3>
+                            </div>
+                            <span>145 Projects</span>
+                        </div>
+
+                        <div class="d-in d-flex justify-between align-center">
+                            <div class="left d-flex align-center">
+                                <span class="dots"></span>
+                                <h3>
+                                    InProgress Projects
+                                </h3>
+                            </div>
+                            <span>85 Projects</span>
+                        </div>
+
+                        <div class="d-in d-flex justify-between align-center">
+                            <div class="left d-flex align-center">
+                                <span class="dots"></span>
+                                <h3>
+                                    Pending Projects
+                                </h3>
+                            </div>
+                            <span>45 Projects</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="c-area12 brd">
+                <img src="assets/" alt="">
+                <form>
+                    <div class="calendar">
+                        <div class="top">
+                            <label>
+                                <select class="month" name="months" size="1">
+                                    <option class="mon" name="1">JANUARY</option>
+                                    <option class="mon" name="2">FEBRUARY</option>
+                                    <option class="mon" name="3">MARCH</option>
+                                    <option class="mon" name="4">APRIL</option>
+                                    <option class="mon" name="5">MAY</option>
+                                    <option class="mon" name="6">JUNE</option>
+                                    <option class="mon" name="7">JULY</option>
+                                    <option class="mon" name="8">AUGUST</option>
+                                    <option class="mon" name="9">SEPTEMBER</option>
+                                    <option class="mon" name="10">OCTOBER</option>
+                                    <option class="mon" name="11">NOVEMBER</option>
+                                    <option class="mon" name="12">DECEMBER</option>
+                                </select>
+                            </label>
+                            <label>
+                                <select class="year" name="years" size="1">
+                                    <option class="yer">2030</option>
+                                    <option class="yer">2029</option>
+                                    <option class="yer">2028</option>
+                                    <option class="yer">2027</option>
+                                    <option class="yer">2026</option>
+                                    <option class="yer">2025</option>
+                                    <option class="yer">2024</option>
+                                    <option class="yer">2023</option>
+                                    <option class="yer">2022</option>
+                                    <option class="yer">2021</option>
+                                    <option class="yer">2020</option>
+                                    <option class="yer">2019</option>
+                                    <option class="yer">2018</option>
+                                    <option class="yer">2017</option>
+                                    <option class="yer">2016</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="week">
+                            <div class="week__day">MON</div>
+                            <div class="week__day">TUE</div>
+                            <div class="week__day">WED</div>
+                            <div class="week__day">THU</div>
+                            <div class="week__day">FRI</div>
+                            <div class="week__day">SAT</div>
+                            <div class="week__day">SUN</div>
+                        </div>
+                        <div class="date">
+                            <div class="date__row">
+                                <div class="date__number">1</div>
+                                <div class="date__number">2</div>
+                                <div class="date__number">3</div>
+                                <div class="date__number">4</div>
+                                <div class="date__number">5</div>
+                                <div class="date__number">6</div>
+                                <div class="date__number">7</div>
+                            </div>
+                            <div class="date__row">
+                                <div class="date__number">8</div>
+                                <div class="date__number">9</div>
+                                <div class="date__number">10</div>
+                                <div class="date__number">11</div>
+                                <div class="date__number">12</div>
+                                <div class="date__number">13</div>
+                                <div class="date__number">14</div>
+                            </div>
+                            <div class="date__row">
+                                <div class="date__number">15</div>
+                                <div class="date__number">16</div>
+                                <div class="date__number">17</div>
+                                <div class="date__number">18</div>
+                                <div class="date__number">19</div>
+                                <div class="date__number">20</div>
+                                <div class="date__number">21</div>
+                            </div>
+                            <div class="date__row">
+                                <div class="date__number">22</div>
+                                <div class="date__number">23</div>
+                                <div class="date__number">24</div>
+                                <div class="date__number">25</div>
+                                <div class="date__number">26</div>
+                                <div class="date__number">27</div>
+                                <div class="date__number">28</div>
+                            </div>
+                            <div class="date__row">
+                                <div class="date__number">29</div>
+                                <div class="date__number">30</div>
+                                <div class="date__number">31</div>
+                                <div class="date__number"></div>
+                                <div class="date__number"></div>
+                                <div class="date__number"></div>
+                                <div class="date__number"></div>
+                            </div>
+                        </div>
+
+                        <div class="tttt">
+                            <h3>EVENTS</h3>
+                        </div>
+
+                        <div class="events">
+
+                            <div class="d-flex align-center">
+
+                                <div class="dt txt-cen">
+                                    <h3>20</h3>
+                                    <p>Mon</p>
+                                </div>
+
+                                <div class="pln">
+                                    <h3>Development planning</h3>
+                                    <p>w3it Technologies</p>
+                                </div>
+
+                            </div>
+
+                            <div class="d-flex align-center">
+
+                                <div class="dt txt-cen">
+                                    <h3>20</h3>
+                                    <p>Mon</p>
+                                </div>
+
+                                <div class="pln">
+                                    <h3>Development planning</h3>
+                                    <p>w3it Technologies</p>
+                                </div>
+
+                            </div>
+
+                            <div class="d-flex align-center">
+
+                                <div class="dt txt-cen">
+                                    <h3>20</h3>
+                                    <p>Mon</p>
+                                </div>
+
+                                <div class="pln">
+                                    <h3>Development planning</h3>
+                                    <p>w3it Technologies</p>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <footer class="txt-cen">
+            <h2>Copyright © Developed by <span>DexignZone </span> 2023 & Replicated By <span> Rudra patel</span></h2>
+        </footer>
+
+    </main>
+
+    <!-- footer -->
+
+
+
+    <!-- setting btn -->
+    <div class="setting-box ">
+
+        <div class="main-box">
+
+            <a href="javascript:void(0);" class="d-flex justify-center">
+                <div class="limd d-flex align-center justify-center">
+                    <h2>Light Mode</h2>
+                </div>
+            </a>
+
+            <a href="javascript:void(0);" class="d-flex justify-center">
+                <div class="dkmd d-flex align-center justify-center">
+                    <h2>Dark Mode</h2>
+                </div>
+            </a>
+
+            <div class="c-theme d-flex flex-column">
+                <div class="header-change">
+                    <h2 class="tlt"> Header </h2>
+                    <div class="colors">
+                        <div class="d-flex">
+                            <div class="blue c-pal"></div>
+                            <div class="green c-pal"></div>
+                            <div class="red c-pal"></div>
+                        </div>
+
+                        <div class="d-flex">
+                            <div class="purple c-pal"></div>
+                            <div class="sky c-pal"></div>
+                            <div class="green2 c-pal"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="aside-change">
+                    <h2 class="tlt"> Aside </h2>
+                    <div class="colors">
+                        <div class="d-flex">
+                            <div class="blue c-pal"></div>
+                            <div class="green c-pal"></div>
+                            <div class="red c-pal"></div>
+                        </div>
+
+                        <div class="d-flex">
+                            <div class="purple c-pal"></div>
+                            <div class="sky c-pal"></div>
+                            <div class="green2 c-pal"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="page-change">
+                    <h2 class="tlt"> Page Area </h2>
+                    <div class="colors">
+                        <div class="d-flex">
+                            <div class="blue c-pal"></div>
+                            <div class="green c-pal"></div>
+                            <div class="red c-pal"></div>
+                        </div>
+
+                        <div class="d-flex">
+                            <div class="purple c-pal"></div>
+                            <div class="sky c-pal"></div>
+                            <div class="green2 c-pal"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <a href="" class="reset">RESET</a>
+            </div>
+
+            <div class="close">
+                <i class="ri-close-fill"></i>
+            </div>
+
+
+        </div>
+
+        <div class="settings-btn d-flex justify-center align-center">
+            <div class="set-in">
+                <i class="fa-solid fa-gear"></i>
+            </div>
+        </div>
+
+
+
+
+    </div>
+    <!-- scripts -->
+
+    <!-- calender -->
+
+
+
+    <!-- map -->
+    <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/data/countries2.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/hierarchy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
+    <!-- apex charts -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- jQuery -->
+    <script src="assets/js/jQuery.js"></script>
+    <script src="assets/js/work.js"></script>
+</body>
+
+</html>
